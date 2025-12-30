@@ -1,0 +1,886 @@
+Emaindhi
+Ayindha emaina
+bagane work avtundi kada
+Deploy avatledhu
+GitHub lo icha
+Nuv link generate chesthe petu
+https://sirimajji25.github.io/Library-Management-CSE-5-/
+Idi chudu
+Online compiler matrame run avutundii
+vs code , antigravity , gbd compiler annitilo run avtundi
+Ha GitHub lo upload chestunte avatlehdu
+Link kavali kada marii
+Call cheyana
+https://hriday9492865027-dev.github.io/sample123/
+Tanaki peta
+register ayyi login avvu
+im dehosting it
+Emaindhii🙏idi petav
+Ok
+Nenu chesthe Enduku avalehdu GitHub lo
+Enti problem
+nuv okari register ayyi chudu
+Username aven telehdu nakuu
+nijam cheppana
+Chepu
+u can create ur own , by going to register
+Website aa
+nuv kuda chesi chusava
+Haaa ipatiki 6 times
+Tanu call lo add cheyamantundi
+Call
+Chestuna
+Wait
+Mana class siri evaru
+Pic emaina unte pettava
+Repu malli vachi nato matladite nuv evaru ani adigite bagodu
+Nice , naku telidu ame mana class lo unnatu
+Sar lee
+Kaluputuna
+Matladu
+Em kadu le
+Mana class ey ga
+Chestuna
+Ethu
+Nrml call ayyite naku signal undadu
+Whatsapp call chey
+Undu
+Idi entii
+Emo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity Corner - Library Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .login-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .panel {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .panel h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            color: #333;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .welcome-title {
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.9);
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #e1e5e9;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            z-index: 1001;
+            transform: translateX(400px);
+            transition: all 0.3s ease;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+        }
+
+        .notification.error {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        }
+
+        .admin-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .admin-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .admin-icon {
+            font-size: 1.5rem;
+            color: #667eea;
+        }
+
+        .table-container {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 100px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        th {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .action-btn {
+            padding: 8px 15px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .edit-btn { background: #4CAF50; color: white; }
+        .delete-btn { background: #f44336; color: white; }
+        .return-btn { background: #2196F3; color: white; }
+
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 16px;
+        }
+
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 80px;
+        }
+
+        .student-dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 100px;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .rules-panel {
+            background: rgba(255,255,255,0.98);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        .rules-panel h2 { margin-bottom: 15px; }
+        .rules-panel p { margin-bottom: 8px; line-height: 1.4; }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .login-container { grid-template-columns: 1fr; gap: 30px; }
+            .welcome-title { font-size: 2.5rem; }
+            .student-dashboard { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- MAIN LOGIN PAGE - DIRECTLY VISIBLE -->
+    <div class="container" id="loginPage">
+        <h1 class="welcome-title">Welcome to Curiosity Corner</h1>
+
+        <div class="login-container">
+            <!-- STUDENT PORTAL -->
+            <div class="panel">
+                <h2>Student Portal</h2>
+                <div id="studentLogin">
+                    <div class="form-group">
+                        <label>Student ID</label>
+                        <input type="text" id="studentId" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="studentPass">
+                    </div>
+                    <button class="btn btn-primary" onclick="studentLogin()">Login</button>
+                    <button class="btn btn-secondary" onclick="showStudentRegister()">Not Registered? Register</button>
+                </div>
+
+                <div id="studentRegister" style="display: none;">
+                    <div class="form-group"><label>Student Name</label><input type="text" id="sName"></div>
+                    <div class="form-group"><label>Student ID *</label><input type="text" id="sId" maxlength="10"></div>
+                    <div class="form-group"><label>Mobile Number *</label><input type="text" id="sMobile" maxlength="10"></div>
+                    <div class="form-group"><label>Branch *</label><input type="text" id="sBranch"></div>
+                    <div class="form-group">
+                        <label>Year *</label>
+                        <select id="sYear">
+                            <option value="">Select Year</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Password *</label><input type="password" id="sPass" placeholder="Min 6 characters"></div>
+                    <button class="btn btn-primary" onclick="studentRegister()">Register</button>
+                    <button class="btn btn-secondary" onclick="showStudentLogin()">Already Registered? Login</button>
+                </div>
+            </div>
+
+            <!-- ADMIN PORTAL -->
+            <div class="panel">
+                <h2>Admin Portal</h2>
+                <div id="adminLogin">
+                    <div class="form-group"><label>Username</label><input type="text" id="adminUser"></div>
+                    <div class="form-group"><label>Password</label><input type="password" id="adminPass"></div>
+                    <div class="form-group"><label>Date</label><input type="date" id="adminDate"></div>
+                    <button class="btn btn-primary" onclick="adminLogin()">Login</button>
+                    <button class="btn btn-secondary" onclick="showAdminRegister()">Register as Admin</button>
+                </div>
+
+                <div id="adminRegister" style="display: none;">
+                    <div class="form-group"><label>Username *</label><input type="text" id="aUser"></div>
+                    <div class="form-group"><label>Password *</label><input type="password" id="aPass"></div>
+                    <div class="form-group"><label>Library Code *</label><input type="password" id="libCode"></div>
+                    <button class="btn btn-primary" onclick="adminRegister()">Register</button>
+                    <button class="btn btn-secondary" onclick="showAdminLogin()">Already Registered? Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div class="container" id="adminDash" style="display: none;">
+        <div class="admin-header">
+            <div class="admin-info">
+                <span class="admin-icon">👨‍💼</span>
+                <span id="currentAdmin">Admin</span>
+            </div>
+            <button class="btn btn-secondary" onclick="logout()" style="width: auto; padding: 10px 25px;">Logout</button>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn btn-primary" onclick="showAdminSection('addBook')">Add Book</button>
+            <button class="btn btn-primary" onclick="showAdminSection('issueBook')">Issue Book</button>
+            <button class="btn btn-primary" onclick="showAdminSection('searchBooks')">Search Books</button>
+            <button class="btn btn-primary" onclick="showAdminSection('issuedBooks')">Issued Books</button>
+            <button class="btn btn-primary" onclick="showAdminSection('studentDetails')">Student Details</button>
+        </div>
+        <div id="adminContent"></div>
+    </div>
+
+    <!-- STUDENT DASHBOARD -->
+    <div class="container" id="studentDash" style="display: none;">
+        <div class="admin-header">
+            <div class="admin-info">
+                <span class="admin-icon">👨‍🎓</span>
+                <span id="currentStudent">Student</span>
+            </div>
+            <button class="btn btn-secondary" onclick="logout()" style="width: auto; padding: 10px 25px;">Logout</button>
+        </div>
+
+        <div id="studentRules" class="rules-panel" style="display:none;">
+            <h2>📚 Library Rules and Regulations for Students</h2>
+            <p>1. Every student must carry a valid Student ID card to enter and use the library facilities.</p>
+            <p>2. Students must maintain silence and discipline inside the library premises.</p>
+            <p>3. Mobile phones should be kept in silent mode while inside the library.</p>
+            <p>4. Each student can borrow library books only after successful registration in the library system.</p>
+            <p>5. A book can be issued to a student for a maximum period of 10 days.</p>
+            <p>6. If a book is not returned within the due date, a fine of ₹10 per day will be charged.</p>
+            <p>7. Students are responsible for the safe custody of books issued in their name.</p>
+            <p>8. Writing, highlighting, underlining, tearing pages, or damaging library books is strictly prohibited.</p>
+            <p>9. In case of loss or serious damage of a book, the student must replace the same book or pay the cost.</p>
+            <p>10. Reference books, journals, newspapers, and magazines are for library use only.</p>
+            <button class="btn btn-primary" onclick="hideRulesAndShowStudentDashboard()">I Agree</button>
+        </div>
+
+        <div class="student-dashboard" id="studentMainDash" style="display:none;">
+            <div class="section">
+                <h2>📚 Books Available</h2>
+                <input type="text" class="search-box" id="studentBookSearch" placeholder="Search books..." onkeyup="filterStudentBooks()">
+                <div id="studentBooksTable"></div>
+            </div>
+            <div class="section">
+                <h2>📋 My Activity</h2>
+                <div id="studentActivityTable"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="returnModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>Check if the dues are cleared.</p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="returnModalOk">OK</button>
+                <button class="btn btn-secondary" id="returnModalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <!-- COMPLETE JAVASCRIPT - NO POPUP LOGIC -->
+    <script>
+        // GLOBAL VARIABLES
+        let students = JSON.parse(localStorage.getItem('students')) || {};
+        let admins = JSON.parse(localStorage.getItem('admins')) || {};
+        let books = JSON.parse(localStorage.getItem('books')) || {};
+        let issuedBooks = JSON.parse(localStorage.getItem('issuedBooks')) || {};
+        let currentUser = localStorage.getItem('currentUser') || null;
+        let currentUserType = localStorage.getItem('currentUserType') || null;
+        let currentStudentId = null;
+        let pendingReturnKey = null;
+
+        // AUTO-LOGIN ON PAGE LOAD
+        document.addEventListener('DOMContentLoaded', function() {
+            updateBooksAvailability();
+            
+            // Modal event listeners
+            document.getElementById('returnModalOk').onclick = () => {
+                document.getElementById('returnModal').style.display = 'none';
+            };
+            document.getElementById('returnModalCancel').onclick = () => {
+                document.getElementById('returnModal').style.display = 'none';
+                pendingReturnKey = null;
+            };
+
+            // Auto-login if user exists
+            if (currentUser && currentUserType === 'student' && students[currentUser]) {
+                currentStudentId = currentUser;
+                showStudentDashboard();
+            } else if (currentUser && currentUserType === 'admin' && admins[currentUser]) {
+                showAdminDashboard();
+                document.getElementById('currentAdmin').textContent = currentUser;
+            }
+        });
+
+        // NOTIFICATION SYSTEM
+        function showNotification(message, type) {
+            const notif = document.getElementById('notification');
+            notif.textContent = message;
+            notif.className = notification ${type} show;
+            setTimeout(() => {
+                notif.className = notification ${type};
+            }, 3000);
+        }
+
+        // VALIDATION FUNCTIONS
+        function validateStudentName(name) { return name.trim() && !/ {2,}/.test(name); }
+        function validateStudentId(id) { return /^[A-Z0-9]+$/.test(id.toUpperCase()); }
+        function validatePhone(phone) { return /^\d{10}$/.test(phone); }
+        function validateBranch(branch) { return /^[A-Za-z\s]+$/.test(branch); }
+        function validateYear(year) { return ['1','2','3','4'].includes(year); }
+        function validatePassword(pass) { return pass.length >= 6; }
+
+        // STUDENT FUNCTIONS
+        function studentLogin() {
+            const id = document.getElementById('studentId').value.trim().toUpperCase();
+            const pass = document.getElementById('studentPass').value;
+
+            if (!id || !pass) return showNotification('Please fill all fields', 'error');
+            if (!students[id] || students[id].password !== pass) return showNotification('Invalid credentials', 'error');
+
+            currentStudentId = id;
+            localStorage.setItem('currentUser', id);
+            localStorage.setItem('currentUserType', 'student');
+            showStudentDashboard();
+            clearStudentLogin();
+            showNotification('Login successful!', 'success');
+        }
+
+        function studentRegister() {
+            const name = document.getElementById('sName').value;
+            const id = document.getElementById('sId').value.toUpperCase().trim();
+            const mobile = document.getElementById('sMobile').value.trim();
+            const branch = document.getElementById('sBranch').value.trim();
+            const year = document.getElementById('sYear').value;
+            const pass = document.getElementById('sPass').value;
+
+            if (!name || !id || !mobile || !branch || !year || !pass) return showNotification('Please fill all fields', 'error');
+            if (!validateStudentName(name)) return showNotification('Invalid name format', 'error');
+            if (!validateStudentId(id)) return showNotification('Student ID: Letters/Numbers only', 'error');
+            if (!validatePhone(mobile)) return showNotification('Phone: 10 digits only', 'error');
+            if (!validateBranch(branch)) return showNotification('Branch: Letters only', 'error');
+            if (!validateYear(year)) return showNotification('Year: 1-4 only', 'error');
+            if (!validatePassword(pass)) return showNotification('Password: 6+ characters', 'error');
+            if (students[id]) return showNotification('Student already exists', 'error');
+
+            students[id] = { name, mobile, branch, year, password: pass };
+            localStorage.setItem('students', JSON.stringify(students));
+            showNotification('Registered! Please login.', 'success');
+            showStudentLogin();
+            clearStudentRegister();
+        }
+
+        // ADMIN FUNCTIONS
+        function adminLogin() {
+            const user = document.getElementById('adminUser').value.trim();
+            const pass = document.getElementById('adminPass').value;
+            const date = document.getElementById('adminDate').value;
+
+            if (!user || !pass || !date) return showNotification('Please fill all fields', 'error');
+            if (!admins[user] || admins[user].password !== pass) return showNotification('Invalid credentials', 'error');
+
+            localStorage.setItem('currentUser', user);
+            localStorage.setItem('currentUserType', 'admin');
+            document.getElementById('currentAdmin').textContent = user;
+            showAdminDashboard();
+            clearAdminLogin();
+            showNotification('Admin login successful!', 'success');
+        }
+
+        function adminRegister() {
+            const user = document.getElementById('aUser').value.trim();
+            const pass = document.getElementById('aPass').value;
+            const libCode = document.getElementById('libCode').value;
+
+            if (!user || !pass || !libCode) return showNotification('Please fill all fields', 'error');
+            if (libCode !== 'MMMM8654') return showNotification('Invalid Library Code', 'error');
+            if (admins[user]) return showNotification('Admin already exists', 'error');
+
+            admins[user] = { password: pass, libCode };
+            localStorage.setItem('admins', JSON.stringify(admins));
+            showNotification('Admin registered!', 'success');
+            showAdminLogin();
+            clearAdminRegister();
+        }
+
+        // UI FUNCTIONS
+        function showStudentRegister() {
+            document.getElementById('studentLogin').style.display = 'none';
+            document.getElementById('studentRegister').style.display = 'block';
+        }
+
+        function showStudentLogin() {
+            document.getElementById('studentRegister').style.display = 'none';
+            document.getElementById('studentLogin').style.display = 'block';
+        }
+
+        function showAdminRegister() {
+            document.getElementById('adminLogin').style.display = 'none';
+            document.getElementById('adminRegister').style.display = 'block';
+        }
+
+        function showAdminLogin() {
+            document.getElementById('adminRegister').style.display = 'none';
+            document.getElementById('adminLogin').style.display = 'block';
+        }
+
+        function showStudentDashboard() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('studentDash').style.display = 'block';
+            document.getElementById('studentRules').style.display = 'block';
+            document.getElementById('studentMainDash').style.display = 'none';
+            document.getElementById('currentStudent').textContent = students[currentStudentId].name;
+        }
+
+        function hideRulesAndShowStudentDashboard() {
+            document.getElementById('studentRules').style.display = 'none';
+            document.getElementById('studentMainDash').style.display = 'grid';
+            loadStudentBooks();
+            loadStudentActivity();
+        }
+
+        function showAdminDashboard() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('adminDash').style.display = 'block';
+            showAdminSection('searchBooks');
+        }
+
+        function showAdminSection(section) {
+            const content = document.getElementById('adminContent');
+            content.innerHTML = '';
+
+            if (section === 'addBook') {
+                content.innerHTML = `
+                    <div class="table-container">
+                        <h2>➕ Add New Book</h2>
+                        <div class="form-group"><label>Book Name</label><input type="text" id="bookName"></div>
+                        <div class="form-group"><label>Book ID</label><input type="text" id="bookId"></div>
+                        <div class="form-group"><label>Author</label><input type="text" id="bookAuthor"></div>
+                        <div class="form-group"><label>No. of Copies</label><input type="number" id="bookCopies" min="1"></div>
+                        <button class="btn btn-primary" onclick="addBook()">Add Book</button>
+                    </div>
+                `;
+            } else if (section === 'searchBooks') {
+                content.innerHTML = `
+                    <div class="table-container">
+                        <h2>🔍 Search Books</h2>
+                        <input type="text" class="search-box" id="adminBookSearch" placeholder="Search books..." onkeyup="filterAdminBooks()">
+                        <div id="adminBooksTable"></div>
+                    </div>
+                `;
+                loadAdminBooks();
+            } else if (section === 'studentDetails') {
+                content.innerHTML = `
+                    <div class="table-container">
+                        <h2>👨‍🎓 Student Details</h2>
+                        <input type="text" class="search-box" id="adminStudentSearch" placeholder="Search students..." onkeyup="filterAdminStudents()">
+                        <div id="adminStudentsTable"></div>
+                    </div>
+                `;
+                loadAdminStudents();
+            } else if (section === 'issueBook') {
+                content.innerHTML = `
+                    <div class="table-container">
+                        <h2>📖 Issue Book</h2>
+                        <div class="form-group"><label>Student ID</label><input type="text" id="issueStudentId"></div>
+                        <div class="form-group"><label>Book ID</label><input type="text" id="issueBookId"></div>
+                        <div class="form-group"><label>Issue Date</label><input type="date" id="issueDate"></div>
+                        <button class="btn btn-primary" onclick="issueBook()">Issue</button>
+                    </div>
+                `;
+            } else if (section === 'issuedBooks') {
+                content.innerHTML = `
+                    <div class="table-container">
+                        <h2>📘 Issued Books</h2>
+                        <div id="issuedBooksTable"></div>
+                    </div>
+                `;
+                loadIssuedBooks();
+            }
+        }
+
+        // FORM CLEAR FUNCTIONS
+        function clearStudentLogin() {
+            document.getElementById('studentId').value = '';
+            document.getElementById('studentPass').value = '';
+        }
+
+        function clearStudentRegister() {
+            document.getElementById('sName').value = document.getElementById('sId').value = 
+            document.getElementById('sMobile').value = document.getElementById('sBranch').value = 
+            document.getElementById('sYear').value = document.getElementById('sPass').value = '';
+        }
+
+        function clearAdminLogin() {
+            document.getElementById('adminUser').value = document.getElementById('adminPass').value = 
+            document.getElementById('adminDate').value = '';
+        }
+
+        function clearAdminRegister() {
+            document.getElementById('aUser').value = document.getElementById('aPass').value = 
+            document.getElementById('libCode').value = '';
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('currentUserType');
+            currentUser = currentUserType = currentStudentId = null;
+            document.getElementById('adminDash').style.display = 'none';
+            document.getElementById('studentDash').style.display = 'none';
+            document.getElementById('loginPage').style.display = 'block';
+        }
+
+        // BOOK FUNCTIONS
+        function addBook() {
+            const name = document.getElementById('bookName').value.trim();
+            const id = document.getElementById('bookId').value.trim().toUpperCase();
+            const author = document.getElementById('bookAuthor').value.trim();
+            const copies = parseInt(document.getElementById('bookCopies').value);
+
+            if (!name || !id || !author || !copies || copies <= 0) return showNotification('Fill all fields correctly', 'error');
+            if (books[id]) return showNotification('Book already exists', 'error');
+
+            books[id] = { name, author, totalCopies: copies, availableCopies: copies };
+            localStorage.setItem('books', JSON.stringify(books));
+            updateBooksAvailability();
+            showNotification('Book added!', 'success');
+            document.querySelectorAll('#addBook input').forEach(input => input.value = '');
+        }
+
+        function updateBooksAvailability() {
+            Object.keys(books).forEach(id => {
+                if (books[id].availableCopies == null) books[id].availableCopies = books[id].totalCopies || 0;
+            });
+            localStorage.setItem('books', JSON.stringify(books));
+        }
+
+        function loadAdminBooks() {
+            const table = document.getElementById('adminBooksTable');
+            let html = '<table><thead><tr><th>Book ID</th><th>Name</th><th>Author</th><th>Total</th><th>Available</th><th>Actions</th></tr></thead><tbody>';
+            Object.keys(books).forEach(id => {
+                const b = books[id];
+                html += `<tr><td>${id}</td><td>${b.name}</td><td>${b.author}</td><td>${b.totalCopies}</td><td>${b.availableCopies}</td>
+                         <td><button class="action-btn edit-btn" onclick="editBook('${id}')">Edit</button>
+                             <button class="action-btn delete-btn" onclick="deleteBook('${id}')">Delete</button></td></tr>`;
+            });
+            table.innerHTML = html + '</tbody></table>';
+        }
+
+        function editBook(id) {
+            const b = books[id];
+            const newName = prompt('New name:', b.name);
+            if (!newName) return;
+            const newAuthor = prompt('New author:', b.author);
+            if (!newAuthor) return;
+            const newCopies = prompt('Total copies:', b.totalCopies);
+            const copies = parseInt(newCopies);
+            if (!newName.trim() || !newAuthor.trim() || isNaN(copies) || copies <= 0) return showNotification('Invalid details', 'error');
+            
+            b.name = newName.trim();
+            b.author = newAuthor.trim();
+            b.totalCopies = copies;
+            b.availableCopies = Math.max(0, b.availableCopies + (copies - b.totalCopies));
+            localStorage.setItem('books', JSON.stringify(books));
+            loadAdminBooks();
+            loadStudentBooks();
+            showNotification('Book updated!', 'success');
+        }
+
+        function deleteBook(id) {
+            if (confirm('Delete this book?')) {
+                delete books[id];
+                localStorage.setItem('books', JSON.stringify(books));
+                loadAdminBooks();
+                loadStudentBooks();
+                showNotification('Book deleted!', 'success');
+            }
+        }
+
+        function loadStudentBooks() {
+            const table = document.getElementById('studentBooksTable');
+            let html = '<table><thead><tr><th>Book ID</th><th>Name</th><th>Author</th><th>Available</th></tr></thead><tbody>';
+            Object.keys(books).forEach(id => {
+                const b = books[id];
+                html += <tr><td>${id}</td><td>${b.name}</td><td>${b.author}</td><td>${b.availableCopies}</td></tr>;
+            });
+            table.innerHTML = html + '</tbody></table>';
+        }
+
+        function filterStudentBooks() {
+            const query = document.getElementById('studentBookSearch').value.toLowerCase();
+            const rows = document.querySelectorAll('#studentBooksTable tbody tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+
+        function loadStudentActivity() {
+            const table = document.getElementById('studentActivityTable');
+            let html = '<table><thead><tr><th>Book ID</th><th>Issue Date</th><th>Status</th></tr></thead><tbody>';
+            Object.keys(issuedBooks).forEach(key => {
+                const issue = issuedBooks[key];
+                if (issue.studentId === currentStudentId) {
+                    html += <tr><td>${issue.bookId}</td><td>${issue.issueDate}</td><td>Issued</td></tr>;
+                }
+            });
+            table.innerHTML = html + '</tbody></table>';
+        }
+
+        function filterAdminBooks() {
+            const query = document.getElementById('adminBookSearch').value.toLowerCase();
+            const rows = document.querySelectorAll('#adminBooksTable tbody tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+
+        function loadAdminStudents() {
+            const table = document.getElementById('adminStudentsTable');
+            let html = '<table><thead><tr><th>ID</th><th>Name</th><th>Mobile</th><th>Branch</th><th>Year</th></tr></thead><tbody>';
+            Object.keys(students).forEach(id => {
+                const s = students[id];
+                html += <tr><td>${id}</td><td>${s.name}</td><td>${s.mobile}</td><td>${s.branch}</td><td>${s.year}</td></tr>;
+            });
+            table.innerHTML = html + '</tbody></table>';
+        }
+
+        function filterAdminStudents() {
+            const query = document.getElementById('adminStudentSearch').value.toLowerCase();
+            const rows = document.querySelectorAll('#adminStudentsTable tbody tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+
+        function loadIssuedBooks() {
+            const table = document.getElementById('issuedBooksTable');
+            let html = '<table><thead><tr><th>Key</th><th>Student ID</th><th>Book ID</th><th>Date</th></tr></thead><tbody>';
+            Object.keys(issuedBooks).forEach(key => {
+                const issue = issuedBooks[key];
+                html += <tr><td>${key}</td><td>${issue.studentId}</td><td>${issue.bookId}</td><td>${issue.issueDate}</td></tr>;
+            });
+            table.innerHTML = html + '</tbody></table>';
+        }
+
+        function issueBook() {
+            const studentId = document.getElementById('issueStudentId').value.toUpperCase().trim();
+            const bookId = document.getElementById('issueBookId').value.toUpperCase().trim();
+            const issueDate = document.getElementById('issueDate').value;
+
+            if (!students[studentId] || !books[bookId] || !issueDate) return showNotification('Invalid details', 'error');
+            if (books[bookId].availableCopies <= 0) return showNotification('No copies available', 'error');
+
+            const key = issue_${Date.now()};
+            issuedBooks[key] = { studentId, bookId, issueDate };
+            books[bookId].availableCopies--;
+            localStorage.setItem('issuedBooks', JSON.stringify(issuedBooks));
+            localStorage.setItem('books', JSON.stringify(books));
+            showNotification('Book issued!', 'success');
+            document.querySelectorAll('#issueBook input').forEach(input => input.value = '');
+        }
+    </script>
+</body>
+</html>
